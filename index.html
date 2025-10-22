@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Эхо Черкесии</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts-online.ru/css/unifix-sp?type=styles&api=2521_121287c2e35b719323f5b72e12479e0a');
+    body {
+      font-family: 'Unifix SP', sans-serif;
+      background-color: #f3e9d2; /* Light sand background */
+    }
+    .font-unifix {
+      font-family: 'Unifix SP', sans-serif;
+    }
+    
+    .route-fade-enter {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .route-fade-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .animate-ornament {
+      animation: ornament-pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes ornament-pulse {
+      0%, 100% {
+        opacity: 0.8;
+        transform: scale(0.98);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+    }
+    
+    .subtle-hover {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+    .subtle-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(44, 62, 80, 0.15);
+    }
+    
+    .ornament-divider {
+      color: rgba(44, 62, 80, 0.15);
+    }
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^20.3.6?external=rxjs",
+    "@angular/router": "https://next.esm.sh/@angular/router@^20.3.6?external=rxjs",
+    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^20.3.6?external=rxjs",
+    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.6?external=rxjs",
+    "@angular/common": "https://next.esm.sh/@angular/common@^20.3.6?external=rxjs"
+  }
+}
+</script>
+</head>
+<body class="antialiased text-[#2c3e50] bg-[#f3e9d2]">
+  <app-root></app-root>
+</body>
+</html>

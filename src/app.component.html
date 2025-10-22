@@ -1,0 +1,11 @@
+@if (isLoading()) {
+  <app-loader></app-loader>
+} @else {
+  <div class="flex flex-col min-h-screen bg-[#f3e9d2] text-[#2c3e50]">
+    <app-header></app-header>
+    <main class="flex-grow container mx-auto p-4 md:p-8">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </main>
+    <app-footer></app-footer>
+  </div>
+}
